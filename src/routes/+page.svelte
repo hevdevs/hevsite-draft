@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { BoxHeadingWrapper } from "$lib/index.js";
+</script>
+
+<body>
+	<BoxHeadingWrapper>
+		<h1>Hey! My name is Hev.</h1>
+	</BoxHeadingWrapper>
+</body>
