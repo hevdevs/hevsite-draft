@@ -19,7 +19,9 @@
 <div
 	class={`relative w-3/4 max-w-3xl h-52 p-5 bg-sky-100 border-8 border-slate-900`}
 >
-	<DialogueText currDialogue={dialogueOptions[index]} />
+	{#key dialogueOptions[index]}
+		<DialogueText currDialogue={dialogueOptions[index]} />
+	{/key}
 	<NextArrowButton
 		{getNextDialogue}
 		isLast={index === dialogueOptions.length - 1}
