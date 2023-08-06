@@ -1,0 +1,3 @@
+<section class={`row-span-2 grid justify-items-center content-center`}>
+	<h2>hellooooo projects</h2>
+</section>

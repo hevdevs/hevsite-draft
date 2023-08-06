@@ -1,18 +1,23 @@
 <script>
-	import { DialogueBoxHeadingWrapper } from "$lib/index.js";
+	import { DialogueBoxHeadingWrapper, Home, Projects } from "$lib/index.js";
+
+	const pages = [
+		{ name: "home", component: Home },
+		{ name: "projects", component: Projects },
+	];
+
+	let currPage = pages[0];
+
+	function selectPage(page) {
+		currPage = page;
+	}
 </script>
 
 <main class="bg-slate-100 w-full h-screen box-border grid grid-rows-3">
 	<header
 		class={`row-span-1 w-full grid grid-cols-1 justify-items-center content-center`}
 	>
-		<DialogueBoxHeadingWrapper />
+		<DialogueBoxHeadingWrapper {selectPage} {pages} />
 	</header>
-	<section class={`row-span-2 grid justify-items-center content-center`}>
-		<img
-			class={`p-5 scale-70 max-w-sm object-contain overflow-hidden`}
-			src={`../../images/hevhi.gif`}
-			alt="pixel art gif of a small hev waving"
-		/>
-	</section>
+	<svelte:component this={currPage.component} />
 </main>
