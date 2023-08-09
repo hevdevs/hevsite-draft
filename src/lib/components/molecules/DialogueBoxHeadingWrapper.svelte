@@ -10,9 +10,9 @@
 	];
 
 	let index = 0;
-	let isOpen = false
+	let isOpen = false;
 	function setOpen() {
-		isOpen = !isOpen
+		isOpen = !isOpen;
 	}
 	function getNextDialogue() {
 		if (index === dialogueOptions.length - 1) index = 0;
@@ -39,11 +39,19 @@
 	</div>
 
 	{#if isOpen}
-		{#each pages as page}
-			<button class="menu-item" on:click={() => selectPage(page)}
-				>{page.name}</button
-			>
-		{/each}
+		<div class={`w-fit z-10 p-2.5 top-12 -right-8 absolute bg-sky-500`}>
+			{#each pages as page}
+				<button
+					class="menu-item hover:text-slate-100"
+					role="link"
+					on:click={() => {
+						setOpen();
+						selectPage(page);
+					}}>{page.name}</button
+				>
+				<br />
+			{/each}
+		</div>
 	{/if}
 	<NextArrowButton
 		{getNextDialogue}
