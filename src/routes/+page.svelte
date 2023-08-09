@@ -1,9 +1,17 @@
 <script>
-	import { DialogueBoxHeadingWrapper, Home, Projects } from "$lib/index.js";
+	import {
+		DialogueBoxHeadingWrapper,
+		Home,
+		Projects,
+		Skills,
+		Socials,
+	} from "$lib/index.js";
 
 	const pages = [
 		{ name: "home", component: Home },
 		{ name: "projects", component: Projects },
+		{ name: "skills", component: Skills },
+		{ name: "socials", component: Socials },
 	];
 
 	let currPage = pages[0];
