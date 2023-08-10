@@ -2,6 +2,7 @@
 	import { DialogueText, NextArrowButton } from "$lib/index";
 	export let selectPage;
 	export let pages;
+	export let currPage; 
 	const dialogueOptions = [
 		"Hey there!",
 		"My name is Hev.",
@@ -30,19 +31,19 @@
 		role="button"
 		tabindex="0"
 		on:keydown={() => setOpen()}
-		class="absolute space-y-1 top-4 right-4"
+		class="absolute group space-y-1 top-4 right-4"
 		on:click={() => setOpen()}
 	>
-		<span class="block w-8 h-1 bg-slate-900" />
-		<span class="block w-8 h-1 bg-slate-900" />
-		<span class="block w-8 h-1 bg-slate-900" />
+		<span class="block w-8 h-1 bg-slate-900 group-hover:bg-sky-500" />
+		<span class="block w-8 h-1 bg-slate-900 group-hover:bg-sky-500" />
+		<span class="block w-8 h-1 bg-slate-900 group-hover:bg-sky-500" />
 	</div>
 
 	{#if isOpen}
-		<div class={`w-fit z-10 p-2.5 top-12 -right-8 absolute bg-sky-500`}>
+		<div class={`w-1/3 min-w-fit z-10 p-2.5 top-12 -right-2 absolute bg-sky-500 border-8 border-slate-900 text-justify`}>
 			{#each pages as page}
 				<button
-					class="menu-item hover:text-slate-100"
+					class={`text-3xl menu-item hover:text-slate-100 font-game leading-relaxed ${currPage.name === page.name? 'underline underline-offset-8 decoration-solid decoration-4' : ''}`}
 					role="link"
 					on:click={() => {
 						setOpen();

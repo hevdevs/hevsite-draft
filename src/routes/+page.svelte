@@ -25,7 +25,7 @@
 	<header
 		class={`row-span-1 w-full grid grid-cols-1 justify-items-center content-center`}
 	>
-		<DialogueBoxHeadingWrapper {selectPage} {pages} />
+		<DialogueBoxHeadingWrapper {selectPage} {pages} {currPage}/>
 	</header>
 	<svelte:component this={currPage.component} />
 </main>
