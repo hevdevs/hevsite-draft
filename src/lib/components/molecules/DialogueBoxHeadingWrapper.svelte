@@ -22,6 +22,7 @@
 		socials: [
 			"Get in touch with me!",
 			"I may be open to collaborate on cool projects...",
+			"Thanks for stopping by.",
 		],
 	};
 
