@@ -5,7 +5,7 @@
 		alt="pixel art gif of a small hev waving"
 	/>
 	<div
-		class={`absolute bottom-10 justify-self-center max-w-fit p-2.5 mt-5 m-2.5 bg-sky-500 border-8 border-slate-900`}
+		class={`absolute bottom-20 justify-self-center max-w-fit p-2.5 mt-5 m-2.5 bg-sky-300 border-8 border-slate-900`}
 	>
 		<h2
 			class={`text-3xl underline underline-offset-4 decoration-solid decoration-4 font-game text-slate-900`}
@@ -30,4 +30,7 @@
 			Music, dogs, coffee, video games.
 		</p>
 	</div>
+	<div
+		class={`bg-sky-300 absolute aspect-square grid-span-2 bottom-1/3 w-96 h-96 w-full rounded-full`}
+	/>
 </section>
