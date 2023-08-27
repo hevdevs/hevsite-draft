@@ -57,7 +57,7 @@
 
 	{#if isOpen}
 		<div
-			class={`w-1/3 min-w-fit z-10 p-2.5 top-12 -right-2 absolute bg-sky-500 border-8 border-slate-900 text-justify`}
+			class={`w-1/3 min-w-fit z-10 p-2.5 top-12 -right-2 absolute bg-sky-300 border-8 border-slate-900 text-justify`}
 		>
 			{#each pages as page}
 				<button
